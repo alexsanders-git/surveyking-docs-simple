@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SurveyKing | Docs</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <!-- <link rel="stylesheet" href="css/general_style.css"> -->
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <script src="./js/script.js" defer></script>
+</head>
+
+<body>
+    <div class="wcl-root">
+        <div class="wcl-container">
+            <div class="wcl-layout">
+                <aside id="wcl-sidebar" class="wcl-sidebar">
+                    <div class="wcl-logo">
+                        <a href="/" class="wcl-logo-link">
+                            <div class="wcl-logo-image">
+                                <img src="/img/logo.svg" alt="logo">
+                            </div>
+
+                            <div class="wcl-logo-text">surveyking<sup>TM</sup></div>
+                        </a>
+
+                        <button id="wcl-close-mob-menu" class="wcl-close-mob-menu">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-x">
+                                <path d="M18 6 6 18" />
+                                <path d="m6 6 12 12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <ul class="wcl-nav-list">
+                        <li class="wcl-nav-list-item">
+                            <a href="#!" class="wcl-nav-list-link">Introduction</a>
+                        </li>
+
+                        <li class="wcl-nav-list-item">
+                            <a href="#!" class="wcl-nav-list-link">Connected Accounts</a>
+                        </li>
+
+                        <li class="wcl-nav-list-item">
+                            <a href="#!" class="wcl-nav-list-link">Errors</a>
+                        </li>
+
+                        <li class="wcl-nav-list-item">
+                            <a href="#!" class="wcl-nav-list-link">Expanding Responses</a>
+                        </li>
+
+                        <li class="wcl-nav-list-item">
+                            <a href="#!" class="wcl-nav-list-link">Idempotent requests</a>
+                        </li>
+
+                        <li class="wcl-nav-list-item">
+                            <a href="#!" class="wcl-nav-list-link">Metadata</a>
+                        </li>
+
+                        <li class="wcl-nav-list-item">
+                            <a href="#!" class="wcl-nav-list-link">Pagination</a>
+                        </li>
+
+                        <li class="wcl-nav-list-item">
+                            <a href="#!" class="wcl-nav-list-link">Request IDs</a>
+                        </li>
+
+                        <li class="wcl-nav-list-item">
+                            <a href="#!" class="wcl-nav-list-link">Versioning</a>
+                        </li>
+
+                        <li class="wcl-nav-list-item">
+                            <a href="#!" class="wcl-nav-list-link">Balance</a>
+                        </li>
+
+                        <li class="wcl-nav-list-item">
+                            <a href="#!" class="wcl-nav-list-link">Balance Transactions</a>
+                        </li>
+
+                        <li class="wcl-nav-list-item">
+                            <a href="#!" class="wcl-nav-list-link">Charges</a>
+                        </li>
+
+                        <li class="wcl-nav-list-item">
+                            <a href="#!" class="wcl-nav-list-link">Customers</a>
+                        </li>
+
+                        <li class="wcl-nav-list-item">
+                            <a href="#!" class="wcl-nav-list-link">Customer Session</a>
+                        </li>
+
+                        <li class="wcl-nav-list-item">
+                            <a href="#!" class="wcl-nav-list-link">Disputes</a>
+                        </li>
+
+                        <li class="wcl-nav-list-item">
+                            <a href="#!" class="wcl-nav-list-link">Events</a>
+                        </li>
+
+                        <li class="wcl-nav-list-item">
+                            <a href="#!" class="wcl-nav-list-link">Files</a>
+                        </li>
+
+                        <li class="wcl-nav-list-item">
+                            <a href="#!" class="wcl-nav-list-link">File Links</a>
+                        </li>
+
+                        <li class="wcl-nav-list-item">
+                            <a href="#!" class="wcl-nav-list-link">Mandates</a>
+                        </li>
+
+                        <li class="wcl-nav-list-item">
+                            <a href="#!" class="wcl-nav-list-link">Setup Intents</a>
+                        </li>
+
+                        <li class="wcl-nav-list-item">
+                            <a href="#!" class="wcl-nav-list-link">Setup Attempts</a>
+                        </li>
+
+                        <li class="wcl-nav-list-item">
+                            <a href="#!" class="wcl-nav-list-link">Payouts</a>
+                        </li>
+
+                        <li class="wcl-nav-list-item">
+                            <a href="#!" class="wcl-nav-list-link">Refunds</a>
+                        </li>
+                    </ul>
+                </aside>
+
+                <div class="wcl-backdrop"></div>
+
+                <main class="wcl-content">
+                    <div class="wcl-content-controls">
+                        <div class="wcl-content-controls-wrapper">
+                            <button id="wcl-burger" class="wcl-burger">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-menu">
+                                    <line x1="4" x2="20" y1="12" y2="12" />
+                                    <line x1="4" x2="20" y1="6" y2="6" />
+                                    <line x1="4" x2="20" y1="18" y2="18" />
+                                </svg>
+                            </button>
+
+                            <a href="/" class="wcl-button primary with-icon">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.00033 9.33366L2.66699 6.00033L6.00033 2.66699" stroke="white"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M13.3337 13.3333V8.66667C13.3337 7.95942 13.0527 7.28115 12.5526 6.78105C12.0525 6.28095 11.3742 6 10.667 6H2.66699"
+                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                                Back to home
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="wcl-content-wrapper">
+                        <section class="wcl-tutorial">
+                            <h1 class="wcl-tutorial-title">API Reference</h1>
+                            <div class="wcl-tutorial-content">
+                                <div class="wcl-tutorial-description">
+                                    <p>
+                                        The Stripe API is organized around <a href="#!">REST</a>. Our API has
+                                        predictable
+                                        resource-oriented URLs, accepts <a href="#!">form-encoded</a> request bodies,
+                                        returns
+                                        <a href="#!">JSON-encoded</a> responses, and uses standard HTTP response codes,
+                                        authentication,
+                                        and verbs.
+                                    </p>
+
+                                    <p>
+                                        You can use the Stripe API in test mode, which doesn’t affect your live data or
+                                        interact with the banking networks. The API key you use to <a
+                                            href="#!">authenticate</a> the
+                                        request determines whether the request is live mode or test mode.
+                                    </p>
+
+                                    <p>
+                                        The Stripe API doesn’t support bulk updates. You can work on only one object per
+                                        request.
+                                    </p>
+
+                                    <p>
+                                        The Stripe API differs for every account as we release new
+                                        <a href="#!">versions</a> and tailor
+                                        functionality. <a href="#!">Log in</a> to see docs with your test key and data.
+                                    </p>
+                                </div>
+
+                                <div class="wcl-tutorial-code">
+                                    <pre>
+<code class="language-javascript">
+const disableScroll = function () {
+    let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
+    let pagePosition = window.scrollY;
+
+    body.style.paddingRight = paddingOffset;
+    body.classList.add('disable-scroll');
+    body.dataset.position = pagePosition;
+    body.style.top = -pagePosition + 'px';
+}
+</code>
+</pre>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="wcl-tutorial">
+                            <h1 class="wcl-tutorial-title">API Reference</h1>
+                            <div class="wcl-tutorial-content">
+                                <div class="wcl-tutorial-description">
+                                    <p>
+                                        The Stripe API is organized around <a href="#!">REST</a>. Our API has
+                                        predictable
+                                        resource-oriented URLs, accepts <a href="#!">form-encoded</a> request bodies,
+                                        returns
+                                        <a href="#!">JSON-encoded</a> responses, and uses standard HTTP response codes,
+                                        authentication,
+                                        and verbs.
+                                    </p>
+
+                                    <ol>
+                                        <li>In the Stripe Dashboard, go to the <a href="#!">subscriptions</a> page.</li>
+                                        <li>Click +<b>Create subscription</b></li>
+                                        <li>Find or add a customer.</li>
+                                        <li>Enter the pricing and product information. You add multiple products.</li>
+                                        <li>Set the start and end date of the subscription.</li>
+                                    </ol>
+
+                                    <p>
+                                        You can use the Stripe API in test mode, which doesn’t affect your live data or
+                                        interact with the banking networks. The API key you use to <a
+                                            href="#!">authenticate</a> the
+                                        request determines whether the request is live mode or test mode.
+                                    </p>
+
+                                    <h2>Edit a subscription </h2>
+
+                                    <p>
+                                        The Stripe API doesn’t support bulk updates. You can work on only one object per
+                                        request.
+                                    </p>
+
+                                    <p>
+                                        The Stripe API differs for every account as we release new
+                                        <a href="#!">versions</a> and tailor
+                                        functionality. <a href="#!">Log in</a> to see docs with your test key and data.
+                                    </p>
+                                </div>
+
+                                <div class="wcl-tutorial-code">
+                                    <pre>
+<code class="language-php">
+&lt;?php
+/*
+* Redirection to the main page after logging out
+*/
+function wcl_logout_redirect( $redirect_to, $requested_redirect_to, $user ) {
+    $redirect_url = home_url();
+    return $redirect_url;
+}
+
+add_filter( 'logout_redirect', 'wcl_logout_redirect', 10, 3 );
+?&gt;
+
+</code>
+</pre>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="wcl-tutorial">
+                            <h1 class="wcl-tutorial-title">API Reference</h1>
+                            <div class="wcl-tutorial-content">
+                                <div class="wcl-tutorial-description">
+                                    <p>
+                                        The Stripe API is organized around <a href="#!">REST</a>. Our API has
+                                        predictable
+                                        resource-oriented URLs, accepts <a href="#!">form-encoded</a> request bodies,
+                                        returns
+                                        <a href="#!">JSON-encoded</a> responses, and uses standard HTTP response codes,
+                                        authentication,
+                                        and verbs.
+                                    </p>
+
+                                    <p>
+                                        You can use the Stripe API in test mode, which doesn’t affect your live data or
+                                        interact with the banking networks. The API key you use to <a
+                                            href="#!">authenticate</a> the
+                                        request determines whether the request is live mode or test mode.
+                                    </p>
+
+                                    <p>
+                                        The Stripe API doesn’t support bulk updates. You can work on only one object per
+                                        request.
+                                    </p>
+
+                                    <p>
+                                        The Stripe API differs for every account as we release new
+                                        <a href="#!">versions</a> and tailor
+                                        functionality. <a href="#!">Log in</a> to see docs with your test key and data.
+                                    </p>
+                                </div>
+
+                                <div class="wcl-tutorial-code">
+                                    <pre>
+<code>
+RequestOptions requestOptions = RequestOptions.builder()
+    .setApiKey("sk_test_4eC39HqLyjWDarjtT1zdp7dc")
+    .build();
+
+Charge charge = Charge.retrieve(
+    "ch_3Ln3ga2eZvKYlo2C11iwHdxy",
+    requestOptions,
+);
+  
+
+</code>
+</pre>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="wcl-tutorial">
+                            <h1 class="wcl-tutorial-title">API Reference</h1>
+                            <div class="wcl-tutorial-content">
+                                <div class="wcl-tutorial-description">
+                                    <p>
+                                        The Stripe API is organized around <a href="#!">REST</a>. Our API has
+                                        predictable
+                                        resource-oriented URLs, accepts <a href="#!">form-encoded</a> request bodies,
+                                        returns
+                                        <a href="#!">JSON-encoded</a> responses, and uses standard HTTP response codes,
+                                        authentication,
+                                        and verbs.
+                                    </p>
+
+                                    <p>
+                                        You can use the Stripe API in test mode, which doesn’t affect your live data or
+                                        interact with the banking networks. The API key you use to <a
+                                            href="#!">authenticate</a> the
+                                        request determines whether the request is live mode or test mode.
+                                    </p>
+
+                                    <p>
+                                        The Stripe API doesn’t support bulk updates. You can work on only one object per
+                                        request.
+                                    </p>
+
+                                    <p>
+                                        The Stripe API differs for every account as we release new
+                                        <a href="#!">versions</a> and tailor
+                                        functionality. <a href="#!">Log in</a> to see docs with your test key and data.
+                                    </p>
+                                </div>
+
+                                <div class="wcl-tutorial-code">
+                                    <pre>
+<code class="language-php">
+
+/*
+* Redirection to the main page after logging out
+*/
+function wcl_logout_redirect( $redirect_to, $requested_redirect_to, $user ) {
+    $redirect_url = home_url();
+    return $redirect_url;
+}
+
+add_filter( 'logout_redirect', 'wcl_logout_redirect', 10, 3 );
+
+</code>
+</pre>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="wcl-tutorial">
+                            <h1 class="wcl-tutorial-title">API Reference</h1>
+                            <div class="wcl-tutorial-content">
+                                <div class="wcl-tutorial-description">
+                                    <p>
+                                        The Stripe API is organized around <a href="#!">REST</a>. Our API has
+                                        predictable
+                                        resource-oriented URLs, accepts <a href="#!">form-encoded</a> request bodies,
+                                        returns
+                                        <a href="#!">JSON-encoded</a> responses, and uses standard HTTP response codes,
+                                        authentication,
+                                        and verbs.
+                                    </p>
+
+                                    <p>
+                                        You can use the Stripe API in test mode, which doesn’t affect your live data or
+                                        interact with the banking networks. The API key you use to <a
+                                            href="#!">authenticate</a> the
+                                        request determines whether the request is live mode or test mode.
+                                    </p>
+
+                                    <p>
+                                        The Stripe API doesn’t support bulk updates. You can work on only one object per
+                                        request.
+                                    </p>
+
+                                    <p>
+                                        The Stripe API differs for every account as we release new
+                                        <a href="#!">versions</a> and tailor
+                                        functionality. <a href="#!">Log in</a> to see docs with your test key and data.
+                                    </p>
+                                </div>
+
+                                <div class="wcl-tutorial-code">
+                                    <pre>
+<code>
+import stripe
+charge = stripe.Charge.retrieve(
+    "ch_3Ln3e92eZvKYlo2C0eUfv7bi",
+    api_key="sk_test_4eC39HqLyjWDarjtT1zdp7dc"
+)
+charge.capture() # Uses the same API Key.
+
+</code>
+</pre>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

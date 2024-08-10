@@ -1,0 +1,420 @@
+@import 'media';
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+
+@font-face {
+    font-family: 'Graphie';
+    src: url('../fonts/Graphie-Book.woff') format('truetype')
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #222;
+    font-size: 14px;
+    background: #fff;
+    font-family: "Work Sans", sans-serif;
+
+    &.disable-scroll {
+        position: relative;
+        overflow: hidden;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+}
+
+.wcl-root {
+    display: flex;
+    min-height: 100vh;
+}
+
+.wcl-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1860px;
+    padding: 20px;
+}
+
+.wcl-layout {
+    display: flex;
+    column-gap: 40px;
+    align-items: flex-start;
+
+    @media only screen and (max-width: $media-xxl) {
+        column-gap: 20px;
+    }
+
+    @media only screen and (max-width: $media-lg) {
+        display: block;
+    }
+}
+
+.wcl-sidebar {
+    position: sticky;
+    top: 28px;
+    width: 100%;
+    max-width: calc(272px - 20px);
+    padding: 18px 20px 30px 20px;
+    border-radius: 20px;
+    border: 1px solid #DDD;
+    background: #F1F3F4;
+
+    @media only screen and (max-width: $media-xl) {
+        max-width: calc(220px - 10px);
+    }
+
+    @media only screen and (max-width: $media-lg) {
+        position: fixed;
+        top: 10px;
+        bottom: 10px;
+        left: 10px;
+        max-width: 60vw;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 99;
+        transform: translate3d(-100%, 0, 0);
+        transition: all .25s ease-in-out;
+    }
+
+    @media only screen and (max-width: $media-md) {
+        max-width: 85vw;
+    }
+
+    &.show {
+        @media only screen and (max-width: $media-lg) {
+            opacity: 1;
+            visibility: visible;
+            transform: translateZ(0);
+        }
+    }
+}
+
+.wcl-sidebar.show+.wcl-backdrop {
+    opacity: 1;
+    visibility: visible;
+}
+
+.wcl-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background-color: #0009;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .25s ease-in-out;
+}
+
+.wcl-logo {
+    position: relative;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #E0E0E0;
+
+    &-link {
+        display: inline-flex;
+        align-items: center;
+        column-gap: 8px;
+        font-family: "Graphie", sans-serif;
+        text-decoration: none;
+    }
+
+    &-image {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-text {
+        color: #222;
+        font-size: 16px;
+
+        sup {
+            margin-left: 5px;
+            font-size: 8px;
+        }
+    }
+}
+
+.wcl-nav-list {
+    margin: 15px 0 0 0;
+    padding: 0;
+    list-style: none;
+
+    @media only screen and (max-width: $media-lg) {
+        height: 80vh;
+        padding-right: 10px;
+        overflow-y: scroll;
+    }
+
+    &-link {
+        display: block;
+        padding: 9px 18px;
+        color: #666;
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all .25s ease-in-out;
+
+        &:visited {
+            color: #666;
+        }
+
+        &:hover,
+        &.active {
+            color: #5B4DAC;
+            border-radius: 100px;
+            background: #E5E6EF;
+        }
+    }
+}
+
+.wcl-content {
+    width: 100%;
+    max-width: calc(100% - 272px - 20px);
+    padding: 0 20px;
+
+    @media only screen and (max-width: $media-xl) {
+        max-width: calc(100% - 220px - 10px);
+    }
+
+    @media only screen and (max-width: $media-lg) {
+        max-width: unset;
+        padding: 0;
+    }
+
+    &-controls {
+        @media only screen and (max-width: $media-lg) {
+            position: fixed;
+            padding: 15px 0;
+            padding-right: 0px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+            background: #fff;
+        }
+
+        &-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+
+            @media only screen and (max-width: $media-lg) {
+                margin: 0 20px;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    &-wrapper {
+        @media only screen and (max-width: $media-lg) {
+            padding-top: 50px;
+        }
+    }
+}
+
+.wcl-burger {
+    display: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+
+    @media only screen and (max-width: $media-lg) {
+        display: block;
+    }
+
+    &:hover {
+        color: #5B4DAC;
+    }
+}
+
+.wcl-close-mob-menu {
+    position: absolute;
+    top: -15px;
+    right: -60px;
+    display: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    color: #fff;
+
+    @media only screen and (max-width: $media-lg) {
+        display: block;
+    }
+
+    &:hover {
+        color: #5B4DAC;
+    }
+}
+
+.wcl-tutorial {
+    &:not(:first-child) {
+        padding-top: 40px;
+
+        @media only screen and (max-width: $media-md) {
+            padding-top: 20px;
+        }
+    }
+
+    &:not(:last-child) {
+        padding-bottom: 60px;
+        border-bottom: 1px solid #E0E0E0;
+
+        @media only screen and (max-width: $media-md) {
+            padding-bottom: 30px;
+        }
+    }
+
+    &-title {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.05;
+    }
+
+    &-content {
+        display: flex;
+        column-gap: 60px;
+
+        @media only screen and (max-width: $media-xxl) {
+            column-gap: 30px;
+        }
+
+        @media only screen and (max-width: $media-xl) {
+            column-gap: 20px;
+        }
+
+        @media only screen and (max-width: $media-lg-md) {
+            flex-direction: column;
+            row-gap: 20px;
+        }
+
+        ul,
+        ol {
+            padding-left: 20px;
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 600;
+            line-height: 1.15;
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+
+        a {
+            color: #5B4DAC;
+            font-weight: 600;
+            text-decoration: none;
+
+            &:hover {
+                color: #7C71BD;
+            }
+        }
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    &-description {
+        width: 100%;
+        max-width: calc(55% - 30px);
+        line-height: 1.8;
+
+        @media only screen and (max-width: $media-xxl) {
+            max-width: calc(55% - 15px);
+        }
+
+        @media only screen and (max-width: $media-xl) {
+            max-width: calc(50% - 10px);
+        }
+
+        @media only screen and (max-width: $media-lg-md) {
+            max-width: unset;
+        }
+    }
+
+    &-code {
+        width: 100%;
+        max-width: calc(45% - 30px);
+
+        @media only screen and (max-width: $media-xxl) {
+            max-width: calc(45% - 15px);
+        }
+
+        @media only screen and (max-width: $media-xl) {
+            max-width: calc(50% - 10px);
+        }
+
+        @media only screen and (max-width: $media-lg-md) {
+            max-width: unset;
+        }
+
+        code {
+            font-family: 'Source Code Pro', monospace;
+            border-radius: 15px;
+        }
+    }
+}
+
+
+/** UI Components */
+.wcl-button {
+    display: block;
+    width: fit-content;
+    padding: 11px 17px;
+    border: 1px solid #666;
+    text-decoration: none;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    transition: all .25s ease-in-out;
+
+    &.primary {
+        color: #fff;
+        border-color: #7C71BD;
+        background: #7C71BD;
+
+        &:hover {
+            border-color: #5B4DAC;
+            background: #5B4DAC;
+        }
+    }
+
+    &.with-icon {
+        display: flex;
+        align-items: center;
+        column-gap: 5px;
+    }
+}
