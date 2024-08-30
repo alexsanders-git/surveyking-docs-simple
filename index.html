@@ -10,7 +10,6 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 
-    <!-- <link rel="stylesheet" href="css/general_style.css"> -->
     <link rel="stylesheet" href="css/style.min.css">
 
     <script src="./js/script.js" defer></script>
@@ -42,95 +41,26 @@
 
                     <ul class="wcl-nav-list">
                         <li class="wcl-nav-list-item">
-                            <a href="#!" class="wcl-nav-list-link">Introduction</a>
+                            <a href="#how-to-create-a-survey-online" class="wcl-nav-list-link">How to Create a Survey
+                                Online</a>
                         </li>
 
                         <li class="wcl-nav-list-item">
-                            <a href="#!" class="wcl-nav-list-link">Connected Accounts</a>
+                            <a href="#the-keys-to-a-great-survey" class="wcl-nav-list-link">The Keys to a Great
+                                Survey</a>
                         </li>
 
                         <li class="wcl-nav-list-item">
-                            <a href="#!" class="wcl-nav-list-link">Errors</a>
+                            <a href="#multiple-choice-question-type" class="wcl-nav-list-link">Multiple Choice Question
+                                Type</a>
                         </li>
 
                         <li class="wcl-nav-list-item">
-                            <a href="#!" class="wcl-nav-list-link">Expanding Responses</a>
+                            <a href="#dropdown-question-type" class="wcl-nav-list-link">Dropdown Question Type</a>
                         </li>
 
                         <li class="wcl-nav-list-item">
-                            <a href="#!" class="wcl-nav-list-link">Idempotent requests</a>
-                        </li>
-
-                        <li class="wcl-nav-list-item">
-                            <a href="#!" class="wcl-nav-list-link">Metadata</a>
-                        </li>
-
-                        <li class="wcl-nav-list-item">
-                            <a href="#!" class="wcl-nav-list-link">Pagination</a>
-                        </li>
-
-                        <li class="wcl-nav-list-item">
-                            <a href="#!" class="wcl-nav-list-link">Request IDs</a>
-                        </li>
-
-                        <li class="wcl-nav-list-item">
-                            <a href="#!" class="wcl-nav-list-link">Versioning</a>
-                        </li>
-
-                        <li class="wcl-nav-list-item">
-                            <a href="#!" class="wcl-nav-list-link">Balance</a>
-                        </li>
-
-                        <li class="wcl-nav-list-item">
-                            <a href="#!" class="wcl-nav-list-link">Balance Transactions</a>
-                        </li>
-
-                        <li class="wcl-nav-list-item">
-                            <a href="#!" class="wcl-nav-list-link">Charges</a>
-                        </li>
-
-                        <li class="wcl-nav-list-item">
-                            <a href="#!" class="wcl-nav-list-link">Customers</a>
-                        </li>
-
-                        <li class="wcl-nav-list-item">
-                            <a href="#!" class="wcl-nav-list-link">Customer Session</a>
-                        </li>
-
-                        <li class="wcl-nav-list-item">
-                            <a href="#!" class="wcl-nav-list-link">Disputes</a>
-                        </li>
-
-                        <li class="wcl-nav-list-item">
-                            <a href="#!" class="wcl-nav-list-link">Events</a>
-                        </li>
-
-                        <li class="wcl-nav-list-item">
-                            <a href="#!" class="wcl-nav-list-link">Files</a>
-                        </li>
-
-                        <li class="wcl-nav-list-item">
-                            <a href="#!" class="wcl-nav-list-link">File Links</a>
-                        </li>
-
-                        <li class="wcl-nav-list-item">
-                            <a href="#!" class="wcl-nav-list-link">Mandates</a>
-                        </li>
-
-                        <li class="wcl-nav-list-item">
-                            <a href="#!" class="wcl-nav-list-link">Setup Intents</a>
-                        </li>
-
-                        <li class="wcl-nav-list-item">
-                            <a href="#!" class="wcl-nav-list-link">Setup Attempts</a>
-                        </li>
-
-                        <li class="wcl-nav-list-item">
-                            <a href="#!" class="wcl-nav-list-link">Payouts</a>
-                        </li>
-
-                        <li class="wcl-nav-list-item">
-                            <a href="#!" class="wcl-nav-list-link">Refunds</a>
+                            <a href="#input-box-question-type" class="wcl-nav-list-link">Input Box Question Type</a>
                         </li>
                     </ul>
                 </aside>
@@ -167,271 +97,261 @@
                     </div>
 
                     <div class="wcl-content-wrapper">
-                        <section class="wcl-tutorial">
-                            <h1 class="wcl-tutorial-title">API Reference</h1>
+                        <section class="wcl-tutorial" id="how-to-create-a-survey-online">
+                            <h1 class="wcl-tutorial-title">How to Create a Survey Online</h1>
                             <div class="wcl-tutorial-content">
                                 <div class="wcl-tutorial-description">
                                     <p>
-                                        The Stripe API is organized around <a href="#!">REST</a>. Our API has
-                                        predictable
-                                        resource-oriented URLs, accepts <a href="#!">form-encoded</a> request bodies,
-                                        returns
-                                        <a href="#!">JSON-encoded</a> responses, and uses standard HTTP response codes,
-                                        authentication,
-                                        and verbs.
+                                        Every organization needs feedback to improve. Surveys are a powerful tool to
+                                        collect that feedback, but creating a survey to get that useful data can seem
+                                        hard. At SurveyKing, we make it simple!
                                     </p>
 
                                     <p>
-                                        You can use the Stripe API in test mode, which doesn’t affect your live data or
-                                        interact with the banking networks. The API key you use to <a
-                                            href="#!">authenticate</a> the
-                                        request determines whether the request is live mode or test mode.
+                                        The most important step is to know your objective. Why are you sending out a
+                                        survey? What insights are you hoping to gain? What specific data do you need?
+                                        Make sure to keep your survey concise and on track based on your objective.
                                     </p>
 
                                     <p>
-                                        The Stripe API doesn’t support bulk updates. You can work on only one object per
-                                        request.
+                                        <strong>Need assistance?</strong> We can help design your survey. From advising
+                                        on advanced
+                                        question types like MaxDiff and conjoint, adding follow-up questions, including
+                                        custom data, and consulting on strategy, we're here to help. <a href="#!">Start
+                                            a chat</a>
                                     </p>
-
-                                    <p>
-                                        The Stripe API differs for every account as we release new
-                                        <a href="#!">versions</a> and tailor
-                                        functionality. <a href="#!">Log in</a> to see docs with your test key and data.
-                                    </p>
-                                </div>
-
-                                <div class="wcl-tutorial-code">
-                                    <pre>
-<code class="language-javascript">
-const disableScroll = function () {
-    let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
-    let pagePosition = window.scrollY;
-
-    body.style.paddingRight = paddingOffset;
-    body.classList.add('disable-scroll');
-    body.dataset.position = pagePosition;
-    body.style.top = -pagePosition + 'px';
-}
-</code>
-</pre>
                                 </div>
                             </div>
                         </section>
 
-                        <section class="wcl-tutorial">
-                            <h1 class="wcl-tutorial-title">API Reference</h1>
+                        <section class="wcl-tutorial" id="the-keys-to-a-great-survey">
+                            <h1 class="wcl-tutorial-title">The Keys to a Great Survey</h1>
                             <div class="wcl-tutorial-content">
                                 <div class="wcl-tutorial-description">
-                                    <p>
-                                        The Stripe API is organized around <a href="#!">REST</a>. Our API has
-                                        predictable
-                                        resource-oriented URLs, accepts <a href="#!">form-encoded</a> request bodies,
-                                        returns
-                                        <a href="#!">JSON-encoded</a> responses, and uses standard HTTP response codes,
-                                        authentication,
-                                        and verbs.
-                                    </p>
-
-                                    <ol>
-                                        <li>In the Stripe Dashboard, go to the <a href="#!">subscriptions</a> page.</li>
-                                        <li>Click +<b>Create subscription</b></li>
-                                        <li>Find or add a customer.</li>
-                                        <li>Enter the pricing and product information. You add multiple products.</li>
-                                        <li>Set the start and end date of the subscription.</li>
-                                    </ol>
+                                    <h2>Use Formatting</h2>
 
                                     <p>
-                                        You can use the Stripe API in test mode, which doesn’t affect your live data or
-                                        interact with the banking networks. The API key you use to <a
-                                            href="#!">authenticate</a> the
-                                        request determines whether the request is live mode or test mode.
-                                    </p>
-
-                                    <h2>Edit a subscription </h2>
-
-                                    <p>
-                                        The Stripe API doesn’t support bulk updates. You can work on only one object per
-                                        request.
+                                        Keep similar questions together to give your survey a logical and focused feel.
+                                        Using multiple pages, page titles and instructions help people understand what
+                                        you're asking and why.
                                     </p>
 
                                     <p>
-                                        The Stripe API differs for every account as we release new
-                                        <a href="#!">versions</a> and tailor
-                                        functionality. <a href="#!">Log in</a> to see docs with your test key and data.
+                                        Don't cram all questions on one page. Spread your questions out over multiple
+                                        pages so respondents do not feel overwhelmed.
                                     </p>
-                                </div>
 
-                                <div class="wcl-tutorial-code">
-                                    <pre>
-<code class="language-php">
-&lt;?php
-/*
-* Redirection to the main page after logging out
-*/
-function wcl_logout_redirect( $redirect_to, $requested_redirect_to, $user ) {
-    $redirect_url = home_url();
-    return $redirect_url;
-}
+                                    <h2>Be Specific</h2>
 
-add_filter( 'logout_redirect', 'wcl_logout_redirect', 10, 3 );
-?&gt;
+                                    <p>
+                                        A question should only encompass one idea at a time to keep your audience
+                                        focused and to make sure they can understand what you’re asking. Multi-topic
+                                        questions can be confusing and tricky to answer.
+                                    </p>
 
-</code>
-</pre>
+                                    <h2>Always Clarify</h2>
+
+                                    <p>
+                                        Spell out everything that could be interpreted in more than one way. Do you want
+                                        to know if someone was satisfied with their purchase? Make sure you specify
+                                        whether you're talking about the product cost, the shipping, customer service
+                                        experience or another specific metric.
+                                    </p>
+
+                                    <h2>Be Brief</h2>
+
+                                    <p>
+                                        The question text and number of questions should be held to a minimum to keep
+                                        respondents motivated to complete your survey.
+                                    </p>
+
+                                    <h2>Be Relevant</h2>
+
+                                    <p>
+                                        Make sure that respondents remain focused by only showing them relevant
+                                        questions. Use logic to skip irrelevant questions. For example, if you have a
+                                        set of questions pertaining to males and females, put those questions on
+                                        different pages and use logic to only show the appropriate ones
+                                    </p>
+
+                                    <h2>Avoid Matrix Questions When Not Necessary</h2>
+
+                                    <p>
+                                        Avoid the <a href="#!">matrix</a> question type when possible. Sometimes
+                                        respondents will focus
+                                        on filling in the grid rather than focusing their attention on each sub-question
+                                        (row choices). This will impact the quality of your data.
+                                    </p>
+
+                                    <h2>Use Words for Ratings</h2>
+
+                                    <p>
+                                        Use words rather than numbers when asking respondents to <a href="#!">rate</a>.
+                                        When creating
+                                        answer choices, use descriptions such as "slightly satisfied" or "extremely
+                                        satisfied" rather than numbers such as "2" or "4" to indicate rating. Answer
+                                        choices with words are easier for people to understand and rank.
+                                    </p>
                                 </div>
                             </div>
                         </section>
 
-                        <section class="wcl-tutorial">
-                            <h1 class="wcl-tutorial-title">API Reference</h1>
+                        <section class="wcl-tutorial" id="multiple-choice-question-type">
+                            <h1 class="wcl-tutorial-title">Multiple Choice Question Type</h1>
                             <div class="wcl-tutorial-content">
                                 <div class="wcl-tutorial-description">
                                     <p>
-                                        The Stripe API is organized around <a href="#!">REST</a>. Our API has
-                                        predictable
-                                        resource-oriented URLs, accepts <a href="#!">form-encoded</a> request bodies,
-                                        returns
-                                        <a href="#!">JSON-encoded</a> responses, and uses standard HTTP response codes,
-                                        authentication,
-                                        and verbs.
+                                        A multiple choice question allows respondents to choose from a predefined list
+                                        of answers. The fewer the amount of answer choices, the less cumbersome it is
+                                        for your respondents.
+                                    </p>
+
+                                    <h2>Example Question</h2>
+
+                                    <p>
+                                        If a question contains more than five choices, the answers will automatcilaly be
+                                        displaed in two columns. On mobile this will show as one column.
+                                    </p>
+
+                                    <h2>Question Settings</h2>
+
+                                    <p>For this question you can choose the following:</p>
+
+                                    <ul>
+                                        <li>Require an answer (can not proceed until answered)</li>
+                                        <li>Add other option with comment box (comment must be entered)</li>
+                                        <li>Randomize answer choices</li>
+                                        <li>Allow more than one answer choice (uses checkboxes)</li>
+                                    </ul>
+
+                                    <h2>Results</h2>
+
+                                    <p>
+                                        A Multiple Choice Question offers you the ability to create a filter or cross
+                                        tabulation report on the answers, helping you spot hidden trends. Summary
+                                        results are displayed in a bar chart and a table showing response counts. When
+                                        the "Other With Text" option is chosen, a link to the other text answers will be
+                                        displayed.
                                     </p>
 
                                     <p>
-                                        You can use the Stripe API in test mode, which doesn’t affect your live data or
-                                        interact with the banking networks. The API key you use to <a
-                                            href="#!">authenticate</a> the
-                                        request determines whether the request is live mode or test mode.
+                                        If multiple responses are selected, the Excel export will create a comma
+                                        separated list to show all of the respondents answers.
                                     </p>
-
-                                    <p>
-                                        The Stripe API doesn’t support bulk updates. You can work on only one object per
-                                        request.
-                                    </p>
-
-                                    <p>
-                                        The Stripe API differs for every account as we release new
-                                        <a href="#!">versions</a> and tailor
-                                        functionality. <a href="#!">Log in</a> to see docs with your test key and data.
-                                    </p>
-                                </div>
-
-                                <div class="wcl-tutorial-code">
-                                    <pre>
-<code>
-RequestOptions requestOptions = RequestOptions.builder()
-    .setApiKey("sk_test_4eC39HqLyjWDarjtT1zdp7dc")
-    .build();
-
-Charge charge = Charge.retrieve(
-    "ch_3Ln3ga2eZvKYlo2C11iwHdxy",
-    requestOptions,
-);
-  
-
-</code>
-</pre>
                                 </div>
                             </div>
                         </section>
 
-                        <section class="wcl-tutorial">
-                            <h1 class="wcl-tutorial-title">API Reference</h1>
+                        <section class="wcl-tutorial" id="dropdown-question-type">
+                            <h1 class="wcl-tutorial-title">Dropdown Question Type</h1>
                             <div class="wcl-tutorial-content">
                                 <div class="wcl-tutorial-description">
                                     <p>
-                                        The Stripe API is organized around <a href="#!">REST</a>. Our API has
-                                        predictable
-                                        resource-oriented URLs, accepts <a href="#!">form-encoded</a> request bodies,
-                                        returns
-                                        <a href="#!">JSON-encoded</a> responses, and uses standard HTTP response codes,
-                                        authentication,
-                                        and verbs.
+                                        A dropdown question allows respondents to choose from a predefined list of
+                                        answers. A dropdown question is useful in situations where you have a large set
+                                        of answer choices. SurveyKing offers the ability to search through options
+                                        within the select element, saving your respondents time.
                                     </p>
 
                                     <p>
-                                        You can use the Stripe API in test mode, which doesn’t affect your live data or
-                                        interact with the banking networks. The API key you use to <a
-                                            href="#!">authenticate</a> the
-                                        request determines whether the request is live mode or test mode.
+                                        The most important step is to know your objective. Why are you sending out a
+                                        survey? What insights are you hoping to gain? What specific data do you need?
+                                        Make sure to keep your survey concise and on track based on your objective.
                                     </p>
 
                                     <p>
-                                        The Stripe API doesn’t support bulk updates. You can work on only one object per
-                                        request.
+                                        <strong>Need assistance?</strong> We can help design your survey. From advising
+                                        on advanced
+                                        question types like MaxDiff and conjoint, adding follow-up questions, including
+                                        custom data, and consulting on strategy, we're here to help. <a href="#!">Start
+                                            a chat</a>
+                                    </p>
+
+                                    <h2>Question Settings</h2>
+
+                                    <p>For this question you can choose the following:</p>
+
+                                    <ul>
+                                        <li>Require an answer (can not proceed until answered)</li>
+                                        <li>Add other option with comment box (comment must be entered)</li>
+                                        <li>Randomize answer choices</li>
+                                    </ul>
+
+                                    <h2>Results</h2>
+
+                                    <p>
+                                        A Dropdown Question offers you the ability to create a filter or cross
+                                        tabulation report on the answers, helping you spot hidden trends. Summary
+                                        results are displayed in a bar chart and a table showing response counts. When
+                                        the "Other With Text" option is chosen, a link to the other text answers will be
+                                        displayed.
                                     </p>
 
                                     <p>
-                                        The Stripe API differs for every account as we release new
-                                        <a href="#!">versions</a> and tailor
-                                        functionality. <a href="#!">Log in</a> to see docs with your test key and data.
+                                        On the Excel export, each question and answer will have one single column.
                                     </p>
-                                </div>
-
-                                <div class="wcl-tutorial-code">
-                                    <pre>
-<code class="language-php">
-
-/*
-* Redirection to the main page after logging out
-*/
-function wcl_logout_redirect( $redirect_to, $requested_redirect_to, $user ) {
-    $redirect_url = home_url();
-    return $redirect_url;
-}
-
-add_filter( 'logout_redirect', 'wcl_logout_redirect', 10, 3 );
-
-</code>
-</pre>
                                 </div>
                             </div>
                         </section>
 
-                        <section class="wcl-tutorial">
-                            <h1 class="wcl-tutorial-title">API Reference</h1>
+                        <section class="wcl-tutorial" id="input-box-question-type">
+                            <h1 class="wcl-tutorial-title">Input Box Question Type</h1>
                             <div class="wcl-tutorial-content">
                                 <div class="wcl-tutorial-description">
                                     <p>
-                                        The Stripe API is organized around <a href="#!">REST</a>. Our API has
-                                        predictable
-                                        resource-oriented URLs, accepts <a href="#!">form-encoded</a> request bodies,
-                                        returns
-                                        <a href="#!">JSON-encoded</a> responses, and uses standard HTTP response codes,
-                                        authentication,
-                                        and verbs.
+                                        The Single Textbox question allows you to collect short open-ended answers from
+                                        respondents. You can also validate the question to require answers in a specific
+                                        format. This question type is best, if you want to gather any type of open-ended
+                                        response, usually when answers will vary greatly and can't be predefined.
                                     </p>
 
-                                    <p>
-                                        You can use the Stripe API in test mode, which doesn’t affect your live data or
-                                        interact with the banking networks. The API key you use to <a
-                                            href="#!">authenticate</a> the
-                                        request determines whether the request is live mode or test mode.
-                                    </p>
+                                    <h2>Question Settings</h2>
 
-                                    <p>
-                                        The Stripe API doesn’t support bulk updates. You can work on only one object per
-                                        request.
-                                    </p>
+                                    <p>For this question you can choose the following:</p>
 
-                                    <p>
-                                        The Stripe API differs for every account as we release new
-                                        <a href="#!">versions</a> and tailor
-                                        functionality. <a href="#!">Log in</a> to see docs with your test key and data.
-                                    </p>
-                                </div>
+                                    <ul>
+                                        <li>Require an answer (can not proceed until answered)</li>
+                                        <li>Character length (minimum or maximum)</li>
+                                        <li>Number range (minimum or maximum)</li>
+                                    </ul>
 
-                                <div class="wcl-tutorial-code">
-                                    <pre>
-<code>
-import stripe
-charge = stripe.Charge.retrieve(
-    "ch_3Ln3e92eZvKYlo2C0eUfv7bi",
-    api_key="sk_test_4eC39HqLyjWDarjtT1zdp7dc"
-)
-charge.capture() # Uses the same API Key.
+                                    <h2>Results</h2>
 
-</code>
-</pre>
+                                    <ul>
+                                        <li>
+                                            Using natural language processing and machine learning, our software will
+                                            automatically categorize answers to open ended (text) questions into
+                                            positive, negative, or neutral buckets, revealing the emotion behind what
+                                            people are saying. You can then quickly filter or compare data based on
+                                            these categories.Beta
+                                        </li>
+
+                                        <li>
+                                            Gibberish or non stranded words will also be detected, helping to eliminate
+                                            garbage data.Beta
+                                        </li>
+
+                                        <li>
+                                            Similar to sentiment analysis, SurveyKing offers the ability to
+                                            automatically identify answers to open ended questions that might be Title
+                                            IX compliance violations. This feature saves administrators hours of work
+                                            combing through answers manually. The survey results can be filtered to show
+                                            responses that have been flagged. These filtered results can then be shared
+                                            with the proper reporting channels, while keeping student identities
+                                            anonymous.Beta
+                                        </li>
+
+                                        <li>
+                                            Will be displayed in a grid like format where you can search answers. The
+                                            table will also contain a link where you can view each respondents
+                                            individual answers.
+                                        </li>
+
+                                        <li>
+                                            You can filter results by what values the user entered for this question
+                                            type.
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </section>

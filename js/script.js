@@ -10,7 +10,7 @@ ready(() => {
     /** Disabled scroll */
     const body = document.body;
 
-    const disableScroll = function () {
+    const disableScroll = () => {
         let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
         let pagePosition = window.scrollY;
 
@@ -20,7 +20,7 @@ ready(() => {
         body.style.top = -pagePosition + 'px';
     }
 
-    const enableScroll = function () {
+    const enableScroll = () => {
         let pagePosition = parseInt(document.body.dataset.position, 10);
         body.style.top = 'auto';
         body.classList.remove('disable-scroll');
@@ -52,5 +52,24 @@ ready(() => {
             enableScroll();
             sidebar.classList.remove('show');
         });
+    }
+
+    /** Highlighting TOC */
+    const sections = document.querySelectorAll('.wcl-tutorial');
+    const navLinks = document.querySelectorAll('.wcl-nav-list-link');
+
+    if (sections && navLinks) {
+        const highlightLink = () => {
+            let index = sections.length;
+
+            while (--index && window.scrollY + 100 < sections[index].offsetTop) { }
+
+            navLinks.forEach((link) => link.classList.remove('active'));
+
+            navLinks[index].classList.add('active');
+        }
+
+        activateLink(); // активація при завантаженні сторінки
+        window.addEventListener('scroll', activateLink);
     }
 });
