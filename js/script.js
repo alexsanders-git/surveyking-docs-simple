@@ -42,14 +42,12 @@ ready(() => {
         burger.addEventListener('click', e => {
             e.preventDefault();
 
-            disableScroll();
             sidebar.classList.add('show');
         });
 
         closeMobMenu.addEventListener('click', e => {
             e.preventDefault();
 
-            enableScroll();
             sidebar.classList.remove('show');
         });
     }
@@ -71,5 +69,34 @@ ready(() => {
 
         highlightLink(); // активація при завантаженні сторінки
         window.addEventListener('scroll', highlightLink);
+    }
+
+
+    /** Close mobile menu after click to link */
+    if (navLinks.length > 0) {
+        if (window.innerWidth < 1025) {
+            const headerOffset = 70;
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', e => {
+                    e.preventDefault();
+
+                    const targetId = link.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+
+                    if (targetSection) {
+                        const elementPosition = targetSection.getBoundingClientRect().top + window.scrollY;
+                        const offsetPosition = elementPosition - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+
+                        sidebar.classList.remove('show');
+                    }
+                });
+            });
+        }
     }
 });
