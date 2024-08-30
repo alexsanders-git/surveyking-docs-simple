@@ -69,7 +69,7 @@ ready(() => {
             navLinks[index].classList.add('active');
         }
 
-        activateLink(); // активація при завантаженні сторінки
-        window.addEventListener('scroll', activateLink);
+        highlightLink(); // активація при завантаженні сторінки
+        window.addEventListener('scroll', highlightLink);
     }
 });
